@@ -5,6 +5,6 @@ public class Phone implements Notifier {
         if (weatherDescription == "rainy") {
             String alert = "It is " + weatherDescription;
             return alert;
-        } else return null;
+        } else return "";
     }
 }

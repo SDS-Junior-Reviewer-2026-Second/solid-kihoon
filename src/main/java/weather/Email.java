@@ -5,6 +5,6 @@ public class Email implements Notifier {
         if (weatherDescription == "sunny") {
             String alert = "It is " + weatherDescription;
             return alert;
-        } else return null;
+        } else return "";
     }
 }
