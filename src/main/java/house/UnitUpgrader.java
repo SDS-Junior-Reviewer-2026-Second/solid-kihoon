@@ -2,9 +2,13 @@ package house;
 
 public class UnitUpgrader {
     public void upgrade(Apartment apartment) {
-        apartment.squareFootage += 40;
+        upgradeFootage(apartment);
 
-        if (apartment.getClass() != Studio.class)
-            apartment.numberOfBedrooms += 1;
+        apartment.upgradeBedroomNumber();
+    }
+
+
+    private static void upgradeFootage(Apartment apartment) {
+        apartment.squareFootage += 40;
     }
 }
