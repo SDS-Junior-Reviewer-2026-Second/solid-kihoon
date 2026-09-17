@@ -12,13 +12,9 @@ public class WeatherTracker {
 
     public void setCurrentConditions(String weatherDescription) {
         this.currentConditions = weatherDescription;
-        if (weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
-        if (weatherDescription == "sunny") {
-            String alert = email.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
+        if (phone.generateWeatherAlert(weatherDescription) != null)
+            System.out.print(phone.generateWeatherAlert(weatherDescription));
+        if (email.generateWeatherAlert(weatherDescription) != null)
+            System.out.print(email.generateWeatherAlert(weatherDescription));
     }
 }
